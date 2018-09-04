@@ -1,6 +1,8 @@
-# issues-AppInsightLoggerSignalRCrash
+# how to get it to run.
 
-Add a local.settings.json in project folder
+- Add a local.settings.json in project folder
+- Insert text from below and update the proper settings:
+```javascript
 {
   "IsEncrypted": false,
   "Values": {
@@ -13,3 +15,12 @@ Add a local.settings.json in project folder
     "APPINSIGHTS_INSTRUMENTATIONKEY": "<instrumentation key to a AppInsights account>"
   }
 }
+```
+
+- In **Functions.cs** update the follow constants to proper values:
+```csharp
+  public const string DatabaseName = "<insert databasename>";
+  public const string CollectionName = "<insert collectionname>";
+  public const string HubName = "<insert hubname>";
+  public const string LeaseCollectioneName = "leases";
+```
